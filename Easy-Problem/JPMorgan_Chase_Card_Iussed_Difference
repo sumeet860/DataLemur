@@ -1,0 +1,5 @@
+SELECT card_name, 
+(MAX(issued_amount)-min(issued_amount)) difference
+from monthly_cards_issued
+GROUP BY card_name
+ORDER BY difference DESC;
